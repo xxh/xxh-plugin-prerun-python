@@ -1,4 +1,5 @@
 CDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-export PIP_TARGET=$XXH_HOME/.pip
-export PYTHONPATH=$PIP_TARGET
-export PATH=$PIP_TARGET/bin:$CDIR/python:$PATH
+export PYTHONHOME=`dirname $XDG_CONFIG_HOME`/.local
+export PYTHONUSERBASE=$PYTHONHOME
+export PYTHONPATH=$PYTHONHOME/lib/python3.8/site-packages:PYTHONPATH
+export PATH=$PYTHONHOME/bin:$CDIR/python:$PATH
