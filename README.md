@@ -29,7 +29,8 @@ myhost> python
 >>> import pandas
 ```
 
-### PyPi packages location
+Packages location comply with [hermetic principle](https://github.com/xxh/xxh/wiki#the-ideas-behind-xxh) and the same as used in [xxh-shell-xonsh-appimage](https://github.com/xxh/xxh-shell-xonsh-appimage):
+
 | xxh command | pip packages home | user home |
 | ------- | ---------- | --------- |
 | `xxh myhost +s bash-zero` | `/home/user/.xxh/.local` | `/home/user/.xxh` |
