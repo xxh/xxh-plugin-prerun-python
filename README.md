@@ -27,9 +27,14 @@ Python 3.8.2
 myhost> pip install pandas
 myhost> python 
 >>> import pandas
-myhost> echo $PIP_TARGET
-/home/ubuntu/.xxh/.pip
 ```
+
+### PyPi packages location
+| xxh command | pip packages home | user home |
+| ------- | ---------- | --------- |
+| `xxh myhost +s bash-zero` | `/home/user/.xxh/.local` | `/home/user/.xxh` |
+| `xxh myhost +s bash-zero +hhh '~'` | `/home/user/.xxh/.local` | `/home/user` | 
+| `xxh myhost +s bash-zero +hhh '~' +hhx '~'` | `/home/user/.local` | `/home/user` |
 
 ## Examples 
 ### Usage xxh python with xxh sudo to run http server with API
