@@ -33,9 +33,9 @@ Packages location comply with [hermetic principle](https://github.com/xxh/xxh/wi
 
 | xxh command | pip packages home | user home |
 | ------- | ---------- | --------- |
-| `xxh myhost +s bash-zero` | `/home/user/.xxh/.local` | `/home/user/.xxh` |
-| `xxh myhost +s bash-zero +hhh '~'` | `/home/user/.xxh/.local` | `/home/user` | 
-| `xxh myhost +s bash-zero +hhh '~' +hhx '~'` | `/home/user/.local` | `/home/user` |
+| `xxh myhost +s bash` | `/home/user/.xxh/.local` | `/home/user/.xxh` |
+| `xxh myhost +s bash +hhh '~'` | `/home/user/.xxh/.local` | `/home/user` | 
+| `xxh myhost +s bash +hhh '~' +hhx '~'` | `/home/user/.local` | `/home/user` |
 
 ## Examples 
 ### Usage xxh python with xxh sudo to run http server with API
