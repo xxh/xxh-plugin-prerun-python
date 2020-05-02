@@ -4,4 +4,8 @@ if [[ $XXH_SHELL != "xonsh" ]]; then
   export PYTHONUSERBASE=$PYTHONHOME
   export PYTHONPATH=$PYTHONHOME/lib/python3.8/site-packages:$PYTHONPATH
   export PATH=$PYTHONHOME/bin:$CDIR/python:$PATH
+else
+    if [[ $XXH_VERBOSE == '1' || $XXH_VERBOSE == '2' ]]; then
+      echo 'xxh-plugin-prerun-python: Skip loading because xonsh used'
+    fi
 fi
