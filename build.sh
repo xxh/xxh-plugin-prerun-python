@@ -24,7 +24,9 @@ done
 cd $build_dir
 mkdir -p python
 cd python
-curl -o python3.8 -L https://github.com/niess/python-appimage/releases/download/python3.8/python3.8.2-cp38-cp38-manylinux2010_x86_64.AppImage
+release_url="https://api.github.com/repos/niess/python-appimage/releases/tags/python3.8"
+download_url=`curl -s "$release_url" | grep "browser_download_url" | grep -wo 'https.*manylinux2010_x86_64[^"]*' | head -n 1`
+curl -s -o python3.8 -L "$download_url"
 chmod +x python3.8
 ln -s python3.8 python
 ln -s python3.8 python3
